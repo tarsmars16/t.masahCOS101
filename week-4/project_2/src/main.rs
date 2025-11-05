@@ -30,7 +30,7 @@ fn main() {
         }
     }
     else if experience == "no" {
-        let incentive = 100_000;
+        let incentive = 100_000.00;
         println!("Your incentive is ₦{:.2}", incentive);
     }
 
