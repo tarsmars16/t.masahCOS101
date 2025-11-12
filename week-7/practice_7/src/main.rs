@@ -8,7 +8,7 @@ fn main() {
     //Array without data type (implicit float data type)
     let arr2 = [10.4,20.7,30.4,40.9,51.2,72.2];
     println!("\nArray without data type");
-    println!("array is {:?}"arr2);
+    println!("array is {:?}",arr2);
     println!("array size is: {}",arr2.len());
 
     //Array with default values that creates and initializes all its elements with 
