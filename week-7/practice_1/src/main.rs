@@ -7,6 +7,6 @@ fn my_grade() {
 
 fn main () {
 
-    //calling a function
+    //Calling a function
     my_grade();
 }
