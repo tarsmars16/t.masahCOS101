@@ -4,15 +4,15 @@ fn main() {
     println!("        ----By Tamaratare Masah----");
     println!();
 
-loop {
-    println!("Would you like to calculate Volume or Area? ( V / A )");
-    let mut input1 = String::new();
-    io::stdin().read_line(& mut input1).expect("Failed to Read String");
-    let vora = input1.trim().to_uppercase();
+    loop {
+        println!("Would you like to calculate Volume or Area? ( V / A )");
+        let mut input1 = String::new();
+        io::stdin().read_line(& mut input1).expect("Failed to Read String");
+        let vora = input1.trim().to_uppercase();
 
-    if vora == "A" {
-        println!("\nWhat Area of Shape would you like to calculate?");
-        println!("Trapezium (T)   Rhombus (R)   Parallelogram (P)   Cube (C) ");
+        if vora == "A" {
+           println!("\nWhat Area of Shape would you like to calculate?");
+           println!("Trapezium (T)   Rhombus (R)   Parallelogram (P)   Cube (C) ");
 
             let mut input2 = String::new();
             io::stdin().read_line(& mut input2).expect("Failed to Read String");
@@ -30,45 +30,53 @@ loop {
             if shape_a == "C"{
                 cube_a();
             }
-    }
-    else if vora == "V" {
-        println!("\nWhat Volume of Shape would you like to calculate?");
-        println!("Cube (C)  Cylinder(K)");
-
-        let mut input3 = String::new();
-        io::stdin().read_line(& mut input3).expect("Failed to Read String");
-        let shape_v = input3.trim().to_uppercase();
-
-        if shape_v == "C" {
-            cube_v();
+            else { println!("Enter a Valid Shape Initial ( T / R / P / C )");
+                  break; }
         }
-        if shape_v == "K" {
+        else if vora == "V" {
+            println!("\nWhat Volume of Shape would you like to calculate?");
+            println!("Cube (C)  Cylinder(K)");
+
+            let mut input3 = String::new();
+            io::stdin().read_line(& mut input3).expect("Failed to Read String");
+            let shape_v = input3.trim().to_uppercase();
+
+            if shape_v == "C" {
+            cube_v();
+            }
+            if shape_v == "K" {
             cylinder();
-        }   
-    }
-    else { println!();
+            }   
+            else { println!("Enter a Valid Shape Initial ( C / K )");
+                  break; 
+            }
+        }
+        
+        else { println!();
            println!("Please Enter a Valid Choice");
            println!("Either V to calculate Volume or A to calulate Area");
            break;
-    }
-    println!("\n---Would you like to continue calculating? (y/n)---");
-    let mut input4 = String::new();
-    io::stdin().read_line(& mut input4).expect("Failed to Read String");
-    let choice = input4.trim().to_lowercase();
+        }
 
-    if choice == "y" {
-        println!("\n---Rerunning Program...");
-        continue;
-    }
-    else if choice == "n" {
-        println!("/n---Thank you for using this Calculator---");
-        break;
-    }
-    else { println!("\nNext time, enter either y to Continue of n to Stop");
-            break; }
+        println!("\n---Would you like to continue calculating? (y/n)---");
+        let mut input4 = String::new();
+        io::stdin().read_line(& mut input4).expect("Failed to Read String");
+        let choice = input4.trim().to_lowercase();
 
+        if choice == "y" {
+            println!("\n---Rerunning Program...");
+            continue;
+        }
+        else if choice == "n" {
+            println!("/n---Thank you for using this Calculator---");
+            break;
+        }
+        else { println!("\nNext time, enter either y to Continue of n to Stop");
+            break; 
+        }
+    }
 }
-}
+
 
 fn get_pi()-> f32 {
     let a = 22.0;
