@@ -12,4 +12,4 @@ fn main() {
     //printing the size of the vector
     println!("\nThe length of the vec macro is: {}",v.len());
 
-}
+}s
