@@ -1,7 +1,7 @@
 use std::io::Write;
 
 fn main() {
-    let announce = "Week 9 - Rust File Input & Output\n";
+    let announce = "Week 9- Rust File Input & Output\n";
     let dept = "Department of Computer Science";
 
     let mut file = std::fs::File::create("data.txt").expect("Create Failed");
