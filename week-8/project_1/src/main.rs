@@ -73,6 +73,7 @@ fn main() {
             break; } //stops code with invalid input
 
     println!("Would You Like to Check the APS Level of Another Public servant? (y / n)");
+        // Ask if user wants to continue
     let mut choice = String::new();
     io::stdin().read_line(& mut choice).expect("Failed to Read Input");
     let choice = choice.trim().to_lowercase();//user input to continue or stop code
